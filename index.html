@@ -2890,7 +2890,7 @@
     shareEmbed.value = `<iframe src="${link}" width="100%" height="520" style="border:1px solid #d0d0d0;border-radius:10px" loading="lazy" allowfullscreen></iframe>`;
     document.getElementById("shareNote").textContent = link.length > 60000
       ? "Ссылка получилась очень длинной (" + link.length + " символов): часть браузеров и сайтов может её не принять."
-      : "Длина ссылки: " + link.length + " символов. Чтобы вставить план на свой сайт, выложите этот HTML-файл на любой хостинг (например GitHub Pages) и укажите его адрес в поле выше.";
+      : "";
     try { localStorage.setItem("room-planner-base", shareBase.value); } catch (e) { /* ignore */ }
   }
   async function openShare() {
